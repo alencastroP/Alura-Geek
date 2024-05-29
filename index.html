@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./assets/heart.png" alt="heart">
+        <h1>AluraGeek</h1>
+        <img class="logo__add" src="./assets/heart.png" alt="heart">
+    </header> 
+
+    <main class="section">
+
+        <section class="section__items">
+            <h1 class="section__title">My Products:</h1>
+            <br>
+            
+            <ul class="section__items__list" alt="" data-list>
+
+            </ul>
+
+        </section>
+
+        <section  class="section__insert">
+            <form class="section__insert__form" data-form>
+                <h1 class="section__title">Add product:</h1>
+                    <div class="form__field">
+                        <label class="field__label" for="name"></label>
+                        <input class="field__input" name="name" type="text" placeholder="name..." minlength="3" required data-name/>
+                        <span class="error-message"></span> 
+                    </div>
+                    <div class="form__field">
+                        <label class="field__label" for="value"></label>
+                        <input class="field__input" name="value" type="number" step="0.01" pattern="\d+(\.\d{2})?" placeholder="value..." required data-price/>
+                        <span class="error-message"></span> 
+                    </div>
+                    <div class="form__field">
+                        <label class="field__label" for="image"></label>
+                        <input class="field__input" name="image" type="url" placeholder="image-url..." required data-image/>
+                        <span class="error-message"></span> 
+                    </div>
+                    <div class="form__button">
+                        <button class="form__button__save" type="submit">Save</button>
+                        <button class="form__button__clear" type="clear">Clear</button>
+                    </div>
+            </form>
+        </section>
+        
+    </main> 
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <img class="logo" src="./assets/heart.png" alt="heart">
+            <h1 class="footer__title">AluraGeek</h1>
+            <img class="logo__add" src="./assets/heart.png" alt="heart">
+        </div>
+        <p class="footer__text">Developed by Pedro Alencastro</p>
+        <p class="footer__text">2024</p>
+        <div class="social_media">
+            <a href="https://github.com/alencastroP" target="_blank">
+                <img src="./assets/github.svg" alt="github icon">
+            </a>
+            <a href="https://www.linkedin.com/in/alencastrp" target="_blank">
+                <img src="./assets/linkedin.svg" alt="linkedin icon">
+            </a>
+            <a href="https://www.instagram.com/alencastrp/" target="_blank">
+                <img src="./assets/instagram.svg" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+
+   
+    <!-- Linked JavaScript Script -->
+    <script src="./script/listProduct.js" type="module"></script>
+    <script src="./script/createProduct.js" type="module"></script>
+    <script src="./script/deleteProduct.js" type="module"></script>
+    <script src="./script/connectApi.js" type="module"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --titleFont: 'Press Start 2P', sans-serif;
+    --textFont: 'IBM Plex Mono', sans-serif;
+    --color0: black;
+    --color1: #1d1c57;
+    --color2: #7345a7;
+    --color3: #343534;
+    --color4: #e9e9e5;
+    --color5: #f0f0e9;
+}
+
+body {
+    background-color: var(--color5);
+}
+
+.header,
+.footer__logo {
+    background-color: var(--color1);
+    font-family: var(--titleFont);
+    font-size: 1.5rem;
+    color: var(--color4);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 30px 50px 30px;
+    padding: 60px 40px 60px 40px;
+    gap: 70px;
+    max-width: 100%;
+}
+
+.section__items {
+    padding: 40px;
+    box-shadow: -10px 10px 10px 10px var(--color2);
+}
+
+.section__insert {
+    padding: 40px;
+}
+
+.message__title {
+    font-family: var(--textFont);
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.section__title {
+    font-family: var(--titleFont);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.section__items__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 50vh;
+    flex-grow: 1;
+    padding: 40px 0 0 0;
+}
+
+.section__items__item {
+    font-family: var(--textFont);
+    background-color: var(--color1);
+    color: var(--color4);
+    margin: 0 10px 40px 0;
+    width: 196px;
+    height: 269px;
+    max-width: 100%;
+    border: 3px solid var(--color0);
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.section__items__image {
+    margin: 10px;
+    width: 176px;
+    height: 174px;
+    border-radius: 5px;
+    border: 3px solid var(--color0);
+}
+
+.section__items__title {
+    font-size: 0.9rem;
+    margin: 0 10px 10px 10px;
+    font-weight: 400;
+}
+
+.section__items__price__delete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 10px 10px;
+}
+
+.section__items__price {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__insert__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.field__input {
+    border: 3px solid var(--color2);
+    border-radius: 40px;
+    width: 392px;
+    height: 58px;
+    color: var(--color1);
+    padding: 15px;
+    font-family: var(--textFont);
+}
+
+.field__input:focus {
+    border: 7px solid var(--color1);
+}
+
+.form__button {
+    gap: 13px;
+}
+
+.form__button__clear,
+.form__button__save {
+    border: 3px solid var(--color2);
+    border-radius: 10px;
+    width: 188px;
+    height: 55px;
+    font-family: var(--textFont);
+}
+
+.form__button__save {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+.form__button__save:hover {
+    background-color: var(--color2);
+}
+
+.form__button__clear {
+    color: var(--color2);
+}
+
+.form__button__clear:hover {
+    background-color: var(--color3);
+    color: var(--color1);
+}
+
+.error-message {
+    font-size: 0.8rem;
+    color: red;
+}
+
+.footer {
+    background-color: var(--color1);
+    padding: 20px;
+    text-align: center;
+    color: var(--color4);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+}
+
+.footer__title {
+    font-family: var(--titleFont);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.footer__text {
+    font-family: var(--textFont);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.social_media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* /////////////////////// TABLET ///////////////////////*/
+@media (max-width: 1023px) {
+    .section {
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+}
+
+/* /////////////////////// MOBILE ///////////////////////*/
+@media (max-width: 767px) {
+    .header,
+    .footer__logo {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .logo__add {
+        display: none;
+    }
+
+    .section {
+        margin: 20px;
+        padding: 0;
+        gap: 70px;
+        max-width: 100%;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+    .form__button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section__title {
+        margin: 10px;
+    }
+
+    .section__insert__form {
+        gap: 20px;
+    }
+}
+
+/* /////////////////////// MOBILE - SMALLER ///////////////////////*/
+@media (max-width: 400px) {
+    .field__input {
+        width: 100%;
+        height: auto;
+    }
+
+    .section__title {
+        font-size: 0.75rem;
+    }
+
+    .logo {
+        display: none;
+    }
+}
